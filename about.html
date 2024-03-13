@@ -3,18 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Zfly Power - China</title>
+    <title>ZFLY POWER GENERATION CO., LTD</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,11 +32,69 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-250px * 7));
+            }
+        }
+
+        .brochure-iframe {
+            height: 800px;
+        }
+
+        .slider {
+            background: white;
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            /* width: 960px; */
+        }
+
+        .slider::before,
+        .slider::after {
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            content: "";
+            height: 400px;
+            position: absolute;
+            /* width: 20px; */
+            z-index: 2;
+        }
+
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+
+        .slider .slide-track {
+            animation: scroll 40s linear infinite;
+            display: flex;
+            width: calc(250px * 14);
+        }
+
+        .slider .slide {
+            margin-right: 30px;
+            /* width: 900px; */
+        }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -47,24 +107,30 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small class="fa fa-map-marker-alt me-2"></small>
                     <small>Fuan City, Fujian Province, China</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                    <small class="far fa-clock me-2"></small>
+                    <small>Mon - Fri : 09.00 AM - 06.00 PM</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+86 13983034287</small>
+                    <small class="fa fa-phone-alt me-2"></small>
+                    <a href="tel:+8613983034287" class="number">+86 13983034287</a>
+                    <small>, &nbsp;</small>
+                    <a href="tel:+8613902297746" class="number">+86 13902297746</a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/13983034287" target="_blank"
+                        class="btn btn-square btn-link rounded-0 border-0 border-secondary" href=""><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing"
+                        target="_blank" class="btn btn-square btn-link rounded-0 border-0 border-secondary" href=""><i
+                            class="fab fa-weixin"></i></a>
+                    <!-- <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a> -->
                 </div>
             </div>
         </div>
@@ -73,9 +139,13 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
-            <h2 class="m-0 text-primary">Zfly Power</h2>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center py-5 px-2 px-lg-3">
+            <img src="img/logo.png" height="55" width="70" />
+            <div class="row" style="width: 190px; padding-left: 20px;">
+                <h2 class="m-0 p-0 text-white title-text">ZFLY POWER</h2>
+                <p class="m-0 p-0 text-white title-text">GENERATION CO., LTD</p>
+            </div>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -83,22 +153,24 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="about.html" class="nav-item nav-link active">About Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="diesel-to-power.html" class="dropdown-item">Diesel to Power</a>
-                        <a href="gas-to-power.html" class="dropdown-item">Gas to Power</a>
-                        <!-- <a href="team.html" class="dropdown-item">CHP Units</a>
-                        <a href="testimonial.html" class="dropdown-item">Lighting Towers</a>
-                        <a href="404.html" class="dropdown-item">Air Compressors</a> -->
+                        <a href="diesel-generators.html" class="dropdown-item">Diesel Generators</a>
+                        <a href="gasoline-generators.html" class="dropdown-item">Gasoline Generators</a>
                     </div>
                 </div>
-                <a href="project.html" class="nav-item nav-link">Projects</a>
-                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a> -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="after-sales-services.html" class="dropdown-item">After-sale Services</a>
+                        <a href="spare-parts.html" class="dropdown-item">Spare Parts</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
             </div>
-            <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact<i class="fa fa-arrow-right ms-3"></i></a>
+            <!-- <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a> -->
         </div>
     </nav>
     <!-- Navbar End -->
@@ -108,7 +180,7 @@
     <div class="container-fluid page-header py-5 mb-5">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-            <h4 class="text-white">Learn about our team</h4>
+            <h4 class="text-white">Learn about our work</h4>
             <!-- <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
@@ -169,32 +241,149 @@
         </div>
     </div>
     <!-- Feature Start -->
-    
+
 
     <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container about px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
-                    </div>
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6 col-md-6">
+                    <h4 class="mb-lg-5" style="color: var(--primary);">Company History</h4>
+                    <p style="text-align: justify;">ZFLY Power Generation Co., Ltd. is a professional manufacturer of
+                        power generation equipment integrating R&D, production and sales. It has over 20 years of legacy
+                        with a registered capital of 50.6 million Yuan and is located at Fuan City, Fujian Province,
+                        China, covering an area of 10,000 square meters. ZFLY Power Generation Co., Ltd. has advanced
+                        production equipment, including laser cutting, sheet metal stamping, metalworking, winding and
+                        inlaying, plastic spraying, painting and assembly lines. With perfect quality control system and
+                        advanced series of testing equipment, we adopt scientific modern management mode and practice
+                        innovation of technology, production, quality and service with ISO9001 international quality
+                        management system as guarantee.</p>
                 </div>
-                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <h6 class="text-primary">About Us</h6>
-                        <h1 class="mb-4">Zfly's Global Presence</h1>
-                        <p>Quality, Innovation, Stability & Financial strength. Our reputation is built on the principle of being a world leader in the engine driven energy equipment industry for more than 20 years. Heavy investment in Research and Development combined with Innovation have all contributed to get us where we are today.</p>
-                        <p><i class="fa fa-check-circle text-primary me-3"></i>Global outreach</p>
-                        <p><i class="fa fa-check-circle text-primary me-3"></i>Prompt after sales support</p>
-                        <p><i class="fa fa-check-circle text-primary me-3"></i>Thoughtful design</p>
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Know More About Us</a>
+                <div class="col">
+                    <img class="img-fluid ml-lg-5" style="border-radius: 10px;" src="img/factory-about.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="text-primary">Factory Tour</h4>
+            </div>
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="img/about-slider.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/about-slider-2.jpeg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/about-slider-3.jpeg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/about-slider-4.jpeg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/about-slider-5.jpeg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/about-slider-6.jpeg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="img/about-slider-7.jpeg" alt="" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- About End -->
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="text-primary">Brochures</h4>
+                <p class="mb-4">Still wanting to know more about our products? All our brochures are available to
+                    download, which include even more information, and images of our products. If you do have any
+                    further questions though, email our team today using the address danlly@zflypower.com</p>
+            </div>
+            <div class="wow fadeInUp w-100" data-wow-delay="0.1s">
+                <iframe class="brochure-iframe w-100"
+                    src="https://drive.google.com/file/d/12L3zZ_ycQOwIlyXcFMcMbIcwhA0WMgsw/preview"
+                    allow="autoplay"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <h6 class="text-primary">Why Choose Us!</h6>
+                        <h1 class="mb-4">Complete Commercial & Residential Power Solutions</h1>
+                        <p class="mb-4 pb-2">Quality, Innovation, Stability & Financial strength. Our reputation is
+                            built on the principle of being a world leader.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-lg-square bg-primary rounded-circle">
+                                        <i class="fa fa-check text-white"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-0">Quality</p>
+                                        <h5 class="mb-0">Services</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-lg-square bg-primary rounded-circle">
+                                        <i class="fa fa-user-check text-white"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-0">Expert</p>
+                                        <h5 class="mb-0">Workers</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-lg-square bg-primary rounded-circle">
+                                        <i class="fa fa-drafting-compass text-white"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-0">Free</p>
+                                        <h5 class="mb-0">Advice</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-lg-square bg-primary rounded-circle">
+                                        <i class="fa fa-headphones text-white"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-0">Customer</p>
+                                        <h5 class="mb-0">Support</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg"
+                            style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
 
 
     <!-- Team Start -->
@@ -205,14 +394,17 @@
                 <h1 class="mb-4">Experienced Team Members</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden">
                         <div class="d-flex">
                             <img class="img-fluid w-75" src="img/team-1.jpg" alt="">
                             <div class="team-social w-25">
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
@@ -221,14 +413,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden">
                         <div class="d-flex">
                             <img class="img-fluid w-75" src="img/team-2.jpg" alt="">
                             <div class="team-social w-25">
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
@@ -237,14 +432,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded overflow-hidden">
                         <div class="d-flex">
                             <img class="img-fluid w-75" src="img/team-3.jpg" alt="">
                             <div class="team-social w-25">
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h5>Full Name</h5>
+                            <span>Designation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded overflow-hidden">
+                        <div class="d-flex">
+                            <img class="img-fluid w-75" src="img/team-3.jpg" alt="">
+                            <div class="team-social w-25">
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg-square btn-outline-primary rounded-circle mt-3" href=""><i
+                                        class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
@@ -257,70 +474,52 @@
         </div>
     </div>
     <!-- Team End -->
-        
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-4">Address</h5>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Contact</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Fuan City, Fujian Province, China</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+86 13983034287</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>danlly@zflypower.com</p>
-                    <div class="d-flex pt-2">
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+8613983034287">+86 13983034287</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+8613902297746">+86 13902297746</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
+                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
+                            href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
+                    <!-- <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Products</h5>
+                    <a class="btn btn-link" href="diesel-generators.html">Diesel Generators</a>
+                    <a class="btn btn-link" href="gasoline-generators.html">Gasoline Generators</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <a class="btn btn-link" href="after-sales-services.html">After-sales Services</a>
+                    <a class="btn btn-link" href="spare-parts.html">Spare Parts</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-4">Project Gallery</h5>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">ZFly Power, 2024</a>. All Right Reserved.
+                        &copy; <a href="#">ZFLY POWER GENERATION CO., LTD</a>. All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -335,9 +534,16 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
+    <a href="https://wa.me/13983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
+        style="background-color: #289c56;"><i class="fab fa-whatsapp fa-lg" style="color: white;"></i></a>
 
+    <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing" target="_blank"
+        class="btn btn-lg btn-lg-square rounded-circle wechat" style="background-color: #289c56;"><i
+            class="fab fa-weixin fa-lg" style="color: white;"></i></a>
+            
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
