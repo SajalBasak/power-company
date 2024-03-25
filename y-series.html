@@ -144,6 +144,59 @@
                 font-size: 15px
             }
         }
+
+        #scroll-container {
+            border: 3px solid black;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #scroll-text {
+            /* animation properties */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+
+            -moz-animation: my-animation 15s linear infinite;
+            -webkit-animation: my-animation 15s linear infinite;
+            animation: my-animation 15s linear infinite;
+        }
+
+        /* for Firefox */
+        @-moz-keyframes my-animation {
+            from {
+                -moz-transform: translateX(100%);
+            }
+
+            to {
+                -moz-transform: translateX(-100%);
+            }
+        }
+
+        /* for Chrome */
+        @-webkit-keyframes my-animation {
+            from {
+                -webkit-transform: translateX(100%);
+            }
+
+            to {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+
+        @keyframes my-animation {
+            from {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+
+            to {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 
@@ -179,7 +232,7 @@
                     <a href="tel:+8613902297746" class="number">+86 13902297746</a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a href="https://wa.me/13983034287" target="_blank"
+                    <a href="https://wa.me/+8613983034287" target="_blank"
                         class="btn btn-square btn-link rounded-0 border-0 border-secondary" href=""><i
                             class="fab fa-whatsapp"></i></a>
                     <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing"
@@ -197,7 +250,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center py-5 px-2 px-lg-3">
-            <img src="img/logo.png" height="55" width="70" />
+            <img src="img/logo.png" height="60" width="70" />
             <div class="row" style="width: 190px; padding-left: 20px;">
                 <h2 class="m-0 p-0 text-white title-text">ZFLY POWER</h2>
                 <p class="m-0 p-0 text-white title-text">GENERATION CO., LTD</p>
@@ -224,6 +277,13 @@
                         <a href="spare-parts.html" class="dropdown-item">Spare Parts</a>
                     </div>
                 </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="brochures.html" class="dropdown-item">Brochures</a>
+                        <a href="https://tengzhiyue.m.en.alibaba.com/" target="_blank" class="dropdown-item">Ecommerce</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
             </div>
             <!-- <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a> -->
@@ -247,7 +307,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Y Series</h6>
-                <p class="mb-4">Our Y Series Diesel Generators, available with Cummins, provide a power range of 20KVA –
+                <p class="mb-4" style="color: black;">Our Y Series Diesel Generators, available with Cummins, provide a power range of 20KVA –
                     1000KVA and is a solution we have developed for the world market with Stage V Emissions as standard.
                     By reducing the emissions to a minimum, this series is classified to the group of environmentally
                     friendly products.</p>
@@ -295,9 +355,10 @@
                 </h5>
                 <h6 class="mb-3">3 PHASE 380/220 V - 415/240 V</h6>
             </div>
-            <p class="text-center" style="font-style: italic;">* For all detailed specifications, please contact us.</p>
+            <p id="scroll-text" class="text-center" style="font-style: italic; color: black; font-weight: bold;">*** For all detailed specifications,
+                please contact us. ***</p>
             <div class="table-responsive">
-                <table class="table text-center table-bordered">
+                <table class="table text-center table-bordered" style="color: black;">
                     <thead>
                         <tr>
                             <th scope="col" style="font-weight: bold;"></th>
@@ -329,328 +390,328 @@
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C20/S 22</th>
-                            <th scope="row">22</th>
-                            <th scope="row">18</th>
-                            <th scope="row">20</th>
-                            <th scope="row">16</th>
-                            <th scope="row">4B3.9-G1</th>
-                            <th scope="row">6.7</th>
-                            <th scope="row">PI144E</th>
-                            <th scope="row">1820X760X1280</th>
-                            <th scope="row">690</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">22</th>
+                            <th scope="row" style="font-weight: lighter;">18</th>
+                            <th scope="row" style="font-weight: lighter;">20</th>
+                            <th scope="row" style="font-weight: lighter;">16</th>
+                            <th scope="row" style="font-weight: lighter;">4B3.9-G1</th>
+                            <th scope="row" style="font-weight: lighter;">6.7</th>
+                            <th scope="row" style="font-weight: lighter;">PI144E</th>
+                            <th scope="row" style="font-weight: lighter;">1820X760X1280</th>
+                            <th scope="row" style="font-weight: lighter;">690</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C30/S</th>
-                            <th scope="row">33</th>
-                            <th scope="row">26</th>
-                            <th scope="row">30</th>
-                            <th scope="row">24</th>
-                            <th scope="row">4B3.9-G2</th>
-                            <th scope="row">7.1</th>
-                            <th scope="row">PI 144G</th>
-                            <th scope="row">1820X760X1280</th>
-                            <th scope="row">703</th>
-                            <th scope="row"><a href='file/Cummins 30kva Engine Specification-ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">33</th>
+                            <th scope="row" style="font-weight: lighter;">26</th>
+                            <th scope="row" style="font-weight: lighter;">30</th>
+                            <th scope="row" style="font-weight: lighter;">24</th>
+                            <th scope="row" style="font-weight: lighter;">4B3.9-G2</th>
+                            <th scope="row" style="font-weight: lighter;">7.1</th>
+                            <th scope="row" style="font-weight: lighter;">PI 144G</th>
+                            <th scope="row" style="font-weight: lighter;">1820X760X1280</th>
+                            <th scope="row" style="font-weight: lighter;">703</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 30kva Engine Specification-ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C40/S</th>
-                            <th scope="row">44</th>
-                            <th scope="row">35</th>
-                            <th scope="row">40</th>
-                            <th scope="row">32</th>
-                            <th scope="row">4BT3.9-G1</th>
-                            <th scope="row">10</th>
-                            <th scope="row">PI144J</th>
-                            <th scope="row">1820X760X1280</th>
-                            <th scope="row">738</th>
-                            <th scope="row"><a href='file/Cummins 40KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">44</th>
+                            <th scope="row" style="font-weight: lighter;">35</th>
+                            <th scope="row" style="font-weight: lighter;">40</th>
+                            <th scope="row" style="font-weight: lighter;">32</th>
+                            <th scope="row" style="font-weight: lighter;">4BT3.9-G1</th>
+                            <th scope="row" style="font-weight: lighter;">10</th>
+                            <th scope="row" style="font-weight: lighter;">PI144J</th>
+                            <th scope="row" style="font-weight: lighter;">1820X760X1280</th>
+                            <th scope="row" style="font-weight: lighter;">738</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 40KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C50/S</th>
-                            <th scope="row">55</th>
-                            <th scope="row">44</th>
-                            <th scope="row">50</th>
-                            <th scope="row">40</th>
-                            <th scope="row">4BT3.9-G2</th>
-                            <th scope="row">12.9</th>
-                            <th scope="row">UCI224D</th>
-                            <th scope="row">1820X760X1280</th>
-                            <th scope="row">765</th>
-                            <th scope="row"><a href='file/Cummins 50KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">55</th>
+                            <th scope="row" style="font-weight: lighter;">44</th>
+                            <th scope="row" style="font-weight: lighter;">50</th>
+                            <th scope="row" style="font-weight: lighter;">40</th>
+                            <th scope="row" style="font-weight: lighter;">4BT3.9-G2</th>
+                            <th scope="row" style="font-weight: lighter;">12.9</th>
+                            <th scope="row" style="font-weight: lighter;">UCI224D</th>
+                            <th scope="row" style="font-weight: lighter;">1820X760X1280</th>
+                            <th scope="row" style="font-weight: lighter;">765</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 50KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C60/S</th>
-                            <th scope="row">66</th>
-                            <th scope="row">52.8</th>
-                            <th scope="row">60</th>
-                            <th scope="row">48</th>
-                            <th scope="row">4BTA3.9-G2</th>
-                            <th scope="row">14.9</th>
-                            <th scope="row">UCI 224E</th>
-                            <th scope="row">2070X7501340</th>
-                            <th scope="row">875</th>
-                            <th scope="row"><a href='file/Cummins 60KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">66</th>
+                            <th scope="row" style="font-weight: lighter;">52.8</th>
+                            <th scope="row" style="font-weight: lighter;">60</th>
+                            <th scope="row" style="font-weight: lighter;">48</th>
+                            <th scope="row" style="font-weight: lighter;">4BTA3.9-G2</th>
+                            <th scope="row" style="font-weight: lighter;">14.9</th>
+                            <th scope="row" style="font-weight: lighter;">UCI 224E</th>
+                            <th scope="row" style="font-weight: lighter;">2070X7501340</th>
+                            <th scope="row" style="font-weight: lighter;">875</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 60KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C80/S</th>
-                            <th scope="row">88</th>
-                            <th scope="row">70.4</th>
-                            <th scope="row">80</th>
-                            <th scope="row">64</th>
-                            <th scope="row">4BTAA3.9-G11</th>
-                            <th scope="row">17.6</th>
-                            <th scope="row">UCI224F</th>
-                            <th scope="row">2070X7501340</th>
-                            <th scope="row">935</th>
-                            <th scope="row"><a href='file/Cummins 80KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">88</th>
+                            <th scope="row" style="font-weight: lighter;">70.4</th>
+                            <th scope="row" style="font-weight: lighter;">80</th>
+                            <th scope="row" style="font-weight: lighter;">64</th>
+                            <th scope="row" style="font-weight: lighter;">4BTAA3.9-G11</th>
+                            <th scope="row" style="font-weight: lighter;">17.6</th>
+                            <th scope="row" style="font-weight: lighter;">UCI224F</th>
+                            <th scope="row" style="font-weight: lighter;">2070X7501340</th>
+                            <th scope="row" style="font-weight: lighter;">935</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 80KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C100/S</th>
-                            <th scope="row">110</th>
-                            <th scope="row">88</th>
-                            <th scope="row">100</th>
-                            <th scope="row">80</th>
-                            <th scope="row">6BT5.9G2</th>
-                            <th scope="row">21.7</th>
-                            <th scope="row">UCI274C</th>
-                            <th scope="row">2230X830X1490</th>
-                            <th scope="row">1095</th>
-                            <th scope="row"><a href='file/Cummins 100KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">110</th>
+                            <th scope="row" style="font-weight: lighter;">88</th>
+                            <th scope="row" style="font-weight: lighter;">100</th>
+                            <th scope="row" style="font-weight: lighter;">80</th>
+                            <th scope="row" style="font-weight: lighter;">6BT5.9G2</th>
+                            <th scope="row" style="font-weight: lighter;">21.7</th>
+                            <th scope="row" style="font-weight: lighter;">UCI274C</th>
+                            <th scope="row" style="font-weight: lighter;">2230X830X1490</th>
+                            <th scope="row" style="font-weight: lighter;">1095</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 100KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C135</th>
-                            <th scope="row">150</th>
-                            <th scope="row">120</th>
-                            <th scope="row">135</th>
-                            <th scope="row">108</th>
-                            <th scope="row">6BTAA5.9-G2</th>
-                            <th scope="row">30</th>
-                            <th scope="row">UCI274E</th>
-                            <th scope="row">2230X830X1490</th>
-                            <th scope="row">1261</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">150</th>
+                            <th scope="row" style="font-weight: lighter;">120</th>
+                            <th scope="row" style="font-weight: lighter;">135</th>
+                            <th scope="row" style="font-weight: lighter;">108</th>
+                            <th scope="row" style="font-weight: lighter;">6BTAA5.9-G2</th>
+                            <th scope="row" style="font-weight: lighter;">30</th>
+                            <th scope="row" style="font-weight: lighter;">UCI274E</th>
+                            <th scope="row" style="font-weight: lighter;">2230X830X1490</th>
+                            <th scope="row" style="font-weight: lighter;">1261</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C150</th>
-                            <th scope="row">165</th>
-                            <th scope="row">132</th>
-                            <th scope="row">150</th>
-                            <th scope="row">120</th>
-                            <th scope="row">6BTAA5.9-G12</th>
-                            <th scope="row">34</th>
-                            <th scope="row">UCI274F</th>
-                            <th scope="row">2230X830X1490</th>
-                            <th scope="row">1300</th>
-                            <th scope="row"><a href='file/Cummins 150KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">165</th>
+                            <th scope="row" style="font-weight: lighter;">132</th>
+                            <th scope="row" style="font-weight: lighter;">150</th>
+                            <th scope="row" style="font-weight: lighter;">120</th>
+                            <th scope="row" style="font-weight: lighter;">6BTAA5.9-G12</th>
+                            <th scope="row" style="font-weight: lighter;">34</th>
+                            <th scope="row" style="font-weight: lighter;">UCI274F</th>
+                            <th scope="row" style="font-weight: lighter;">2230X830X1490</th>
+                            <th scope="row" style="font-weight: lighter;">1300</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 150KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C180</th>
-                            <th scope="row">200</th>
-                            <th scope="row">160</th>
-                            <th scope="row">180</th>
-                            <th scope="row">144</th>
-                            <th scope="row">6CTA8.3-G1</th>
-                            <th scope="row">42</th>
-                            <th scope="row">UCI274G</th>
-                            <th scope="row">2480X880X1490</th>
-                            <th scope="row">1582</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">200</th>
+                            <th scope="row" style="font-weight: lighter;">160</th>
+                            <th scope="row" style="font-weight: lighter;">180</th>
+                            <th scope="row" style="font-weight: lighter;">144</th>
+                            <th scope="row" style="font-weight: lighter;">6CTA8.3-G1</th>
+                            <th scope="row" style="font-weight: lighter;">42</th>
+                            <th scope="row" style="font-weight: lighter;">UCI274G</th>
+                            <th scope="row" style="font-weight: lighter;">2480X880X1490</th>
+                            <th scope="row" style="font-weight: lighter;">1582</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C200</th>
-                            <th scope="row">220</th>
-                            <th scope="row">176</th>
-                            <th scope="row">200</th>
-                            <th scope="row">160</th>
-                            <th scope="row">6CTAA8.3-G2</th>
-                            <th scope="row">45</th>
-                            <th scope="row">UCI274H</th>
-                            <th scope="row">2480X880X1490</th>
-                            <th scope="row">1707</th>
-                            <th scope="row"><a href='file/Cummins 200KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">220</th>
+                            <th scope="row" style="font-weight: lighter;">176</th>
+                            <th scope="row" style="font-weight: lighter;">200</th>
+                            <th scope="row" style="font-weight: lighter;">160</th>
+                            <th scope="row" style="font-weight: lighter;">6CTAA8.3-G2</th>
+                            <th scope="row" style="font-weight: lighter;">45</th>
+                            <th scope="row" style="font-weight: lighter;">UCI274H</th>
+                            <th scope="row" style="font-weight: lighter;">2480X880X1490</th>
+                            <th scope="row" style="font-weight: lighter;">1707</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 200KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C250</th>
-                            <th scope="row">275</th>
-                            <th scope="row">220</th>
-                            <th scope="row">250</th>
-                            <th scope="row">200</th>
-                            <th scope="row">6LTAA8.9-G2</th>
-                            <th scope="row">54</th>
-                            <th scope="row">UCDI274K</th>
-                            <th scope="row">2580X1050X1841</th>
-                            <th scope="row">1851</th>
-                            <th scope="row"><a href='file/Cummins 250KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">275</th>
+                            <th scope="row" style="font-weight: lighter;">220</th>
+                            <th scope="row" style="font-weight: lighter;">250</th>
+                            <th scope="row" style="font-weight: lighter;">200</th>
+                            <th scope="row" style="font-weight: lighter;">6LTAA8.9-G2</th>
+                            <th scope="row" style="font-weight: lighter;">54</th>
+                            <th scope="row" style="font-weight: lighter;">UCDI274K</th>
+                            <th scope="row" style="font-weight: lighter;">2580X1050X1841</th>
+                            <th scope="row" style="font-weight: lighter;">1851</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 250KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C300</th>
-                            <th scope="row">330</th>
-                            <th scope="row">264</th>
-                            <th scope="row">300</th>
-                            <th scope="row">240</th>
-                            <th scope="row">NTA855-G1A</th>
-                            <th scope="row">69</th>
-                            <th scope="row">HCI444D</th>
-                            <th scope="row">3020X1100X1850</th>
-                            <th scope="row">2700</th>
-                            <th scope="row"><a href='file/Cummins 300KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">330</th>
+                            <th scope="row" style="font-weight: lighter;">264</th>
+                            <th scope="row" style="font-weight: lighter;">300</th>
+                            <th scope="row" style="font-weight: lighter;">240</th>
+                            <th scope="row" style="font-weight: lighter;">NTA855-G1A</th>
+                            <th scope="row" style="font-weight: lighter;">69</th>
+                            <th scope="row" style="font-weight: lighter;">HCI444D</th>
+                            <th scope="row" style="font-weight: lighter;">3020X1100X1850</th>
+                            <th scope="row" style="font-weight: lighter;">2700</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 300KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C350</th>
-                            <th scope="row">400</th>
-                            <th scope="row">320</th>
-                            <th scope="row">350</th>
-                            <th scope="row">280</th>
-                            <th scope="row">NTA855-G2A</th>
-                            <th scope="row">70</th>
-                            <th scope="row">HCI444E</th>
-                            <th scope="row">3020X1100X1850</th>
-                            <th scope="row">2790</th>
-                            <th scope="row"><a href='file/Cummins 350KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">400</th>
+                            <th scope="row" style="font-weight: lighter;">320</th>
+                            <th scope="row" style="font-weight: lighter;">350</th>
+                            <th scope="row" style="font-weight: lighter;">280</th>
+                            <th scope="row" style="font-weight: lighter;">NTA855-G2A</th>
+                            <th scope="row" style="font-weight: lighter;">70</th>
+                            <th scope="row" style="font-weight: lighter;">HCI444E</th>
+                            <th scope="row" style="font-weight: lighter;">3020X1100X1850</th>
+                            <th scope="row" style="font-weight: lighter;">2790</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 350KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C400</th>
-                            <th scope="row">450</th>
-                            <th scope="row">360</th>
-                            <th scope="row">400</th>
-                            <th scope="row">320</th>
-                            <th scope="row">NTAA855-G7A</th>
-                            <th scope="row">82</th>
-                            <th scope="row">HCI444F</th>
-                            <th scope="row">3200X1150X1800</th>
-                            <th scope="row">2800</th>
-                            <th scope="row"><a href='file/Cummins 400KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">450</th>
+                            <th scope="row" style="font-weight: lighter;">360</th>
+                            <th scope="row" style="font-weight: lighter;">400</th>
+                            <th scope="row" style="font-weight: lighter;">320</th>
+                            <th scope="row" style="font-weight: lighter;">NTAA855-G7A</th>
+                            <th scope="row" style="font-weight: lighter;">82</th>
+                            <th scope="row" style="font-weight: lighter;">HCI444F</th>
+                            <th scope="row" style="font-weight: lighter;">3200X1150X1800</th>
+                            <th scope="row" style="font-weight: lighter;">2800</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 400KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C450</th>
-                            <th scope="row">500</th>
-                            <th scope="row">400</th>
-                            <th scope="row">450</th>
-                            <th scope="row">360</th>
-                            <th scope="row">QSZ13-G2</th>
-                            <th scope="row">101</th>
-                            <th scope="row">HCI544C</th>
-                            <th scope="row">3200X1360X2182</th>
-                            <th scope="row">3175</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">500</th>
+                            <th scope="row" style="font-weight: lighter;">400</th>
+                            <th scope="row" style="font-weight: lighter;">450</th>
+                            <th scope="row" style="font-weight: lighter;">360</th>
+                            <th scope="row" style="font-weight: lighter;">QSZ13-G2</th>
+                            <th scope="row" style="font-weight: lighter;">101</th>
+                            <th scope="row" style="font-weight: lighter;">HCI544C</th>
+                            <th scope="row" style="font-weight: lighter;">3200X1360X2182</th>
+                            <th scope="row" style="font-weight: lighter;">3175</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C500</th>
-                            <th scope="row">550</th>
-                            <th scope="row">440</th>
-                            <th scope="row">500</th>
-                            <th scope="row">400</th>
-                            <th scope="row">QSZ13-G3</th>
-                            <th scope="row">100</th>
-                            <th scope="row">HCI544D</th>
-                            <th scope="row">3400X1258X2050</th>
-                            <th scope="row">3300</th>
-                            <th scope="row"><a href='file/Cummins 500KVA Engine Specification ZFLY.pdf'
+                            <th scope="row" style="font-weight: lighter;">550</th>
+                            <th scope="row" style="font-weight: lighter;">440</th>
+                            <th scope="row" style="font-weight: lighter;">500</th>
+                            <th scope="row" style="font-weight: lighter;">400</th>
+                            <th scope="row" style="font-weight: lighter;">QSZ13-G3</th>
+                            <th scope="row" style="font-weight: lighter;">100</th>
+                            <th scope="row" style="font-weight: lighter;">HCI544D</th>
+                            <th scope="row" style="font-weight: lighter;">3400X1258X2050</th>
+                            <th scope="row" style="font-weight: lighter;">3300</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Cummins 500KVA Engine Specification ZFLY.pdf'
                                     target="_blank"><i class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C600</th>
-                            <th scope="row">660</th>
-                            <th scope="row">528</th>
-                            <th scope="row">600</th>
-                            <th scope="row">480</th>
-                            <th scope="row">KTAA19-G8</th>
-                            <th scope="row">127</th>
-                            <th scope="row">HCI544E</th>
-                            <th scope="row">3700X1570X2080</th>
-                            <th scope="row">4028</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">660</th>
+                            <th scope="row" style="font-weight: lighter;">528</th>
+                            <th scope="row" style="font-weight: lighter;">600</th>
+                            <th scope="row" style="font-weight: lighter;">480</th>
+                            <th scope="row" style="font-weight: lighter;">KTAA19-G8</th>
+                            <th scope="row" style="font-weight: lighter;">127</th>
+                            <th scope="row" style="font-weight: lighter;">HCI544E</th>
+                            <th scope="row" style="font-weight: lighter;">3700X1570X2080</th>
+                            <th scope="row" style="font-weight: lighter;">4028</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C650</th>
-                            <th scope="row">700</th>
-                            <th scope="row">560</th>
-                            <th scope="row">650</th>
-                            <th scope="row">520</th>
-                            <th scope="row">QSKT19-G3</th>
-                            <th scope="row">152</th>
-                            <th scope="row">HCI544F</th>
-                            <th scope="row">3400X1550X2250</th>
-                            <th scope="row">4200</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">700</th>
+                            <th scope="row" style="font-weight: lighter;">560</th>
+                            <th scope="row" style="font-weight: lighter;">650</th>
+                            <th scope="row" style="font-weight: lighter;">520</th>
+                            <th scope="row" style="font-weight: lighter;">QSKT19-G3</th>
+                            <th scope="row" style="font-weight: lighter;">152</th>
+                            <th scope="row" style="font-weight: lighter;">HCI544F</th>
+                            <th scope="row" style="font-weight: lighter;">3400X1550X2250</th>
+                            <th scope="row" style="font-weight: lighter;">4200</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C746</th>
-                            <th scope="row">820</th>
-                            <th scope="row">656</th>
-                            <th scope="row">746</th>
-                            <th scope="row">597</th>
-                            <th scope="row">KTA38-G1</th>
-                            <th scope="row">160</th>
-                            <th scope="row">HCI634G</th>
-                            <th scope="row">4450X2100X2320</th>
-                            <th scope="row">6750</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">820</th>
+                            <th scope="row" style="font-weight: lighter;">656</th>
+                            <th scope="row" style="font-weight: lighter;">746</th>
+                            <th scope="row" style="font-weight: lighter;">597</th>
+                            <th scope="row" style="font-weight: lighter;">KTA38-G1</th>
+                            <th scope="row" style="font-weight: lighter;">160</th>
+                            <th scope="row" style="font-weight: lighter;">HCI634G</th>
+                            <th scope="row" style="font-weight: lighter;">4450X2100X2320</th>
+                            <th scope="row" style="font-weight: lighter;">6750</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C800</th>
-                            <th scope="row">900</th>
-                            <th scope="row">720</th>
-                            <th scope="row">800</th>
-                            <th scope="row">640</th>
-                            <th scope="row">KTA38-G2B</th>
-                            <th scope="row">167</th>
-                            <th scope="row">HCI634G1</th>
-                            <th scope="row">4550X2100X2320</th>
-                            <th scope="row">6908</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">900</th>
+                            <th scope="row" style="font-weight: lighter;">720</th>
+                            <th scope="row" style="font-weight: lighter;">800</th>
+                            <th scope="row" style="font-weight: lighter;">640</th>
+                            <th scope="row" style="font-weight: lighter;">KTA38-G2B</th>
+                            <th scope="row" style="font-weight: lighter;">167</th>
+                            <th scope="row" style="font-weight: lighter;">HCI634G1</th>
+                            <th scope="row" style="font-weight: lighter;">4550X2100X2320</th>
+                            <th scope="row" style="font-weight: lighter;">6908</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C900</th>
-                            <th scope="row">1000</th>
-                            <th scope="row">800</th>
-                            <th scope="row">900</th>
-                            <th scope="row">720</th>
-                            <th scope="row">KTA38-G2A</th>
-                            <th scope="row">191</th>
-                            <th scope="row">HCI634H1</th>
-                            <th scope="row">4550X2100X2320</th>
-                            <th scope="row">6908</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">1000</th>
+                            <th scope="row" style="font-weight: lighter;">800</th>
+                            <th scope="row" style="font-weight: lighter;">900</th>
+                            <th scope="row" style="font-weight: lighter;">720</th>
+                            <th scope="row" style="font-weight: lighter;">KTA38-G2A</th>
+                            <th scope="row" style="font-weight: lighter;">191</th>
+                            <th scope="row" style="font-weight: lighter;">HCI634H1</th>
+                            <th scope="row" style="font-weight: lighter;">4550X2100X2320</th>
+                            <th scope="row" style="font-weight: lighter;">6908</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Y-C1000</th>
-                            <th scope="row">1100</th>
-                            <th scope="row">880</th>
-                            <th scope="row">1000</th>
-                            <th scope="row">800</th>
-                            <th scope="row">KTA38-G5</th>
-                            <th scope="row">209</th>
-                            <th scope="row">HCI634J1</th>
-                            <th scope="row">4650X2100X2320</th>
-                            <th scope="row">7133</th>
-                            <th scope="row"></th>
+                            <th scope="row" style="font-weight: lighter;">1100</th>
+                            <th scope="row" style="font-weight: lighter;">880</th>
+                            <th scope="row" style="font-weight: lighter;">1000</th>
+                            <th scope="row" style="font-weight: lighter;">800</th>
+                            <th scope="row" style="font-weight: lighter;">KTA38-G5</th>
+                            <th scope="row" style="font-weight: lighter;">209</th>
+                            <th scope="row" style="font-weight: lighter;">HCI634J1</th>
+                            <th scope="row" style="font-weight: lighter;">4650X2100X2320</th>
+                            <th scope="row" style="font-weight: lighter;">7133</th>
+                            <th scope="row" style="font-weight: lighter;"></th>
                         </tr>
                     </tbody>
                 </table>
@@ -674,9 +735,9 @@
                     <div class="p-lg-5 pe-lg-0">
                         <h6 class="text-primary">Contact us</h6>
                         <h1 class="mb-4">Write us your message.</h1>
-                        <p class="mb-4 pb-2">Quality, Innovation, Stability & Financial strength. Our reputation is
+                        <p class="mb-4 pb-2" style="color: black;">Quality, Innovation, Stability & Financial strength. Our reputation is
                             built on the principle of being a world leader.</p>
-                        <form action="mailto:danlly@zflypower.com" method="post" enctype="text/plain">
+                        <form action="mailto:sales@zflypower.com" method="post" enctype="text/plain">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="name" placeholder="Your Name"
@@ -723,9 +784,9 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+8613902297746">+86 13902297746</a>
                     </p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
-                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
+                        href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
-                            href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
+                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
                     <!-- <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -772,7 +833,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-    <a href="https://wa.me/13983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
+    <a href="https://wa.me/+8613983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
         style="background-color: #289c56;"><i class="fab fa-whatsapp fa-lg" style="color: white;"></i></a>
 
     <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing" target="_blank"

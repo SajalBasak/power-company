@@ -144,6 +144,59 @@
                 font-size: 15px
             }
         }
+
+        #scroll-container {
+            border: 3px solid black;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #scroll-text {
+            /* animation properties */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+
+            -moz-animation: my-animation 15s linear infinite;
+            -webkit-animation: my-animation 15s linear infinite;
+            animation: my-animation 15s linear infinite;
+        }
+
+        /* for Firefox */
+        @-moz-keyframes my-animation {
+            from {
+                -moz-transform: translateX(100%);
+            }
+
+            to {
+                -moz-transform: translateX(-100%);
+            }
+        }
+
+        /* for Chrome */
+        @-webkit-keyframes my-animation {
+            from {
+                -webkit-transform: translateX(100%);
+            }
+
+            to {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+
+        @keyframes my-animation {
+            from {
+                -moz-transform: translateX(100%);
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+
+            to {
+                -moz-transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 
@@ -179,7 +232,7 @@
                     <a href="tel:+8613902297746" class="number">+86 13902297746</a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a href="https://wa.me/13983034287" target="_blank"
+                    <a href="https://wa.me/+8613983034287" target="_blank"
                         class="btn btn-square btn-link rounded-0 border-0 border-secondary" href=""><i
                             class="fab fa-whatsapp"></i></a>
                     <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing"
@@ -197,7 +250,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center py-5 px-2 px-lg-3">
-            <img src="img/logo.png" height="55" width="70" />
+            <img src="img/logo.png" height="60" width="70" />
             <div class="row" style="width: 190px; padding-left: 20px;">
                 <h2 class="m-0 p-0 text-white title-text">ZFLY POWER</h2>
                 <p class="m-0 p-0 text-white title-text">GENERATION CO., LTD</p>
@@ -224,6 +277,13 @@
                         <a href="spare-parts.html" class="dropdown-item">Spare Parts</a>
                     </div>
                 </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="brochures.html" class="dropdown-item">Brochures</a>
+                        <a href="https://tengzhiyue.m.en.alibaba.com/" target="_blank" class="dropdown-item">Ecommerce</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
             </div>
             <!-- <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a> -->
@@ -247,7 +307,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Z Series</h6>
-                <p class="mb-4">Our Z Series Diesel Generators, available with Ricardo, provide a power range of 30KVA –
+                <p class="mb-4" style="color: black;">Our Z Series Diesel Generators, available with Ricardo, provide a power range of 30KVA –
                     206KVA and is a solution we have developed for the world market with Stage V Emissions as standard.
                     By reducing the emissions to a minimum, this series is classified to the group of environmentally
                     friendly products.</p>
@@ -289,9 +349,10 @@
                     controller, 50 Hz</h5>
                 <h6 class="mb-3">3 PHASE 380/220 V - 415/240 V</h6>
             </div>
-            <p class="text-center" style="font-style: italic;">* For all detailed specifications, please contact us.</p>
+            <p id="scroll-text" class="text-center" style="font-style: italic; color: black; font-weight: bold;">*** For all detailed specifications,
+                please contact us. ***</p>
             <div class="table-responsive">
-                <table class="table text-center table-bordered">
+                <table class="table text-center table-bordered" style="color: black;">
                     <thead>
                         <tr>
                             <th scope="col" style="font-weight: bold;"></th>
@@ -323,177 +384,177 @@
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R33/S</th>
-                            <th scope="row">33</th>
-                            <th scope="row">26</th>
-                            <th scope="row">30</th>
-                            <th scope="row">24</th>
-                            <th scope="row">ZH4100D</th>
-                            <th scope="row">6.27</th>
-                            <th scope="row">GPL1844G</th>
-                            <th scope="row">2150X850X1130</th>
-                            <th scope="row">703</th>
-                            <th scope="row"><a href='file/Z series R30S.pdf' target="_blank"><i class="fa fa-download"
+                            <th scope="row" style="font-weight: lighter;">33</th>
+                            <th scope="row" style="font-weight: lighter;">26</th>
+                            <th scope="row" style="font-weight: lighter;">30</th>
+                            <th scope="row" style="font-weight: lighter;">24</th>
+                            <th scope="row" style="font-weight: lighter;">ZH4100D</th>
+                            <th scope="row" style="font-weight: lighter;">6.27</th>
+                            <th scope="row" style="font-weight: lighter;">GPL1844G</th>
+                            <th scope="row" style="font-weight: lighter;">2150X850X1130</th>
+                            <th scope="row" style="font-weight: lighter;">703</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R30S.pdf' target="_blank"><i class="fa fa-download"
                                         aria-hidden="true" style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R44/S</th>
-                            <th scope="row">44</th>
-                            <th scope="row">35.2</th>
-                            <th scope="row">40</th>
-                            <th scope="row">32</th>
-                            <th scope="row">ZH4100ZD</th>
-                            <th scope="row">7.3</th>
-                            <th scope="row">GPL184J</th>
-                            <th scope="row">2250X850X1200</th>
-                            <th scope="row">738</th>
-                            <th scope="row"><a href='file/Z series R40S.pdf' target="_blank"><i class="fa fa-download"
+                            <th scope="row" style="font-weight: lighter;">44</th>
+                            <th scope="row" style="font-weight: lighter;">35.2</th>
+                            <th scope="row" style="font-weight: lighter;">40</th>
+                            <th scope="row" style="font-weight: lighter;">32</th>
+                            <th scope="row" style="font-weight: lighter;">ZH4100ZD</th>
+                            <th scope="row" style="font-weight: lighter;">7.3</th>
+                            <th scope="row" style="font-weight: lighter;">GPL184J</th>
+                            <th scope="row" style="font-weight: lighter;">2250X850X1200</th>
+                            <th scope="row" style="font-weight: lighter;">738</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R40S.pdf' target="_blank"><i class="fa fa-download"
                                         aria-hidden="true" style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R55/S</th>
-                            <th scope="row">55</th>
-                            <th scope="row">44</th>
-                            <th scope="row">50</th>
-                            <th scope="row">40</th>
-                            <th scope="row">ZH4105ZD</th>
-                            <th scope="row">9.5</th>
-                            <th scope="row">GPL224D</th>
-                            <th scope="row">2350X950X1300</th>
-                            <th scope="row">765</th>
-                            <th scope="row"><a href='file/Z series R50S .pdf' target="_blank"><i class="fa fa-download"
+                            <th scope="row" style="font-weight: lighter;">55</th>
+                            <th scope="row" style="font-weight: lighter;">44</th>
+                            <th scope="row" style="font-weight: lighter;">50</th>
+                            <th scope="row" style="font-weight: lighter;">40</th>
+                            <th scope="row" style="font-weight: lighter;">ZH4105ZD</th>
+                            <th scope="row" style="font-weight: lighter;">9.5</th>
+                            <th scope="row" style="font-weight: lighter;">GPL224D</th>
+                            <th scope="row" style="font-weight: lighter;">2350X950X1300</th>
+                            <th scope="row" style="font-weight: lighter;">765</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R50S .pdf' target="_blank"><i class="fa fa-download"
                                         aria-hidden="true" style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R69/S</th>
-                            <th scope="row">69</th>
-                            <th scope="row">55.2</th>
-                            <th scope="row">62.5</th>
-                            <th scope="row">50</th>
-                            <th scope="row">ZH4105ZLD</th>
-                            <th scope="row">13</th>
-                            <th scope="row">GPL224E</th>
-                            <th scope="row">2250X930X1200</th>
-                            <th scope="row">1030</th>
-                            <th scope="row"><a href='file/Z series R62.5S.pdf' target="_blank"><i class="fa fa-download"
+                            <th scope="row" style="font-weight: lighter;">69</th>
+                            <th scope="row" style="font-weight: lighter;">55.2</th>
+                            <th scope="row" style="font-weight: lighter;">62.5</th>
+                            <th scope="row" style="font-weight: lighter;">50</th>
+                            <th scope="row" style="font-weight: lighter;">ZH4105ZLD</th>
+                            <th scope="row" style="font-weight: lighter;">13</th>
+                            <th scope="row" style="font-weight: lighter;">GPL224E</th>
+                            <th scope="row" style="font-weight: lighter;">2250X930X1200</th>
+                            <th scope="row" style="font-weight: lighter;">1030</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R62.5S.pdf' target="_blank"><i class="fa fa-download"
                                         aria-hidden="true" style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R88/S</th>
-                            <th scope="row">88</th>
-                            <th scope="row">70.4</th>
-                            <th scope="row">80</th>
-                            <th scope="row">64</th>
-                            <th scope="row">R4108IZD</th>
-                            <th scope="row">17</th>
-                            <th scope="row">GPL224G</th>
-                            <th scope="row">2800X1100X1550</th>
-                            <th scope="row">1400</th>
-                            <th scope="row"><a href='file/Z series R80Sdoc (4 CYLINDERS).pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">88</th>
+                            <th scope="row" style="font-weight: lighter;">70.4</th>
+                            <th scope="row" style="font-weight: lighter;">80</th>
+                            <th scope="row" style="font-weight: lighter;">64</th>
+                            <th scope="row" style="font-weight: lighter;">R4108IZD</th>
+                            <th scope="row" style="font-weight: lighter;">17</th>
+                            <th scope="row" style="font-weight: lighter;">GPL224G</th>
+                            <th scope="row" style="font-weight: lighter;">2800X1100X1550</th>
+                            <th scope="row" style="font-weight: lighter;">1400</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R80Sdoc (4 CYLINDERS).pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R88/S</th>
-                            <th scope="row">88</th>
-                            <th scope="row">70.4</th>
-                            <th scope="row">80</th>
-                            <th scope="row">64</th>
-                            <th scope="row">6105ZD</th>
-                            <th scope="row">17</th>
-                            <th scope="row">GPL224G</th>
-                            <th scope="row">2800X1100X1550</th>
-                            <th scope="row">1400</th>
-                            <th scope="row"><a href='file/Z series R80S(6CYLINDERS).pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">88</th>
+                            <th scope="row" style="font-weight: lighter;">70.4</th>
+                            <th scope="row" style="font-weight: lighter;">80</th>
+                            <th scope="row" style="font-weight: lighter;">64</th>
+                            <th scope="row" style="font-weight: lighter;">6105ZD</th>
+                            <th scope="row" style="font-weight: lighter;">17</th>
+                            <th scope="row" style="font-weight: lighter;">GPL224G</th>
+                            <th scope="row" style="font-weight: lighter;">2800X1100X1550</th>
+                            <th scope="row" style="font-weight: lighter;">1400</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R80S(6CYLINDERS).pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R110/S</th>
-                            <th scope="row">110</th>
-                            <th scope="row">88</th>
-                            <th scope="row">100</th>
-                            <th scope="row">80</th>
-                            <th scope="row">6105AZD</th>
-                            <th scope="row">18</th>
-                            <th scope="row">GPL274C</th>
-                            <th scope="row">2800X1100X1550</th>
-                            <th scope="row">1495</th>
-                            <th scope="row"><a href='file/Z series R100S(6CYLINDERS) .pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">110</th>
+                            <th scope="row" style="font-weight: lighter;">88</th>
+                            <th scope="row" style="font-weight: lighter;">100</th>
+                            <th scope="row" style="font-weight: lighter;">80</th>
+                            <th scope="row" style="font-weight: lighter;">6105AZD</th>
+                            <th scope="row" style="font-weight: lighter;">18</th>
+                            <th scope="row" style="font-weight: lighter;">GPL274C</th>
+                            <th scope="row" style="font-weight: lighter;">2800X1100X1550</th>
+                            <th scope="row" style="font-weight: lighter;">1495</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R100S(6CYLINDERS) .pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R137.5/S</th>
-                            <th scope="row">137.5</th>
-                            <th scope="row">110</th>
-                            <th scope="row">125</th>
-                            <th scope="row">100</th>
-                            <th scope="row">6105AZLD</th>
-                            <th scope="row">25</th>
-                            <th scope="row">GPL274D</th>
-                            <th scope="row">2250X1000X1450(OP)</th>
-                            <th scope="row">1095</th>
-                            <th scope="row"><a href='file/Z series R125S(6CYLINDERS).pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">137.5</th>
+                            <th scope="row" style="font-weight: lighter;">110</th>
+                            <th scope="row" style="font-weight: lighter;">125</th>
+                            <th scope="row" style="font-weight: lighter;">100</th>
+                            <th scope="row" style="font-weight: lighter;">6105AZLD</th>
+                            <th scope="row" style="font-weight: lighter;">25</th>
+                            <th scope="row" style="font-weight: lighter;">GPL274D</th>
+                            <th scope="row" style="font-weight: lighter;">2250X1000X1450(OP)</th>
+                            <th scope="row" style="font-weight: lighter;">1095</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R125S(6CYLINDERS).pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R165/S</th>
-                            <th scope="row">165</th>
-                            <th scope="row">132</th>
-                            <th scope="row">150</th>
-                            <th scope="row">120</th>
-                            <th scope="row">6105IZLD</th>
-                            <th scope="row">30</th>
-                            <th scope="row">GPL274FS</th>
-                            <th scope="row">2400X1000X1450(OP)</th>
-                            <th scope="row">1210</th>
-                            <th scope="row"><a href='file/Z series R150S(6CYLINDERS).pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">165</th>
+                            <th scope="row" style="font-weight: lighter;">132</th>
+                            <th scope="row" style="font-weight: lighter;">150</th>
+                            <th scope="row" style="font-weight: lighter;">120</th>
+                            <th scope="row" style="font-weight: lighter;">6105IZLD</th>
+                            <th scope="row" style="font-weight: lighter;">30</th>
+                            <th scope="row" style="font-weight: lighter;">GPL274FS</th>
+                            <th scope="row" style="font-weight: lighter;">2400X1000X1450(OP)</th>
+                            <th scope="row" style="font-weight: lighter;">1210</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R150S(6CYLINDERS).pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R206/S</th>
-                            <th scope="row">206</th>
-                            <th scope="row">164.8</th>
-                            <th scope="row">187.5</th>
-                            <th scope="row">150</th>
-                            <th scope="row">YXR6108ZLD</th>
-                            <th scope="row">33</th>
-                            <th scope="row">GPL274H</th>
-                            <th scope="row">2450X950X1450(OP)</th>
-                            <th scope="row">1320</th>
-                            <th scope="row"><a href='file/Z series R188S(6CYLINDERS.pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">206</th>
+                            <th scope="row" style="font-weight: lighter;">164.8</th>
+                            <th scope="row" style="font-weight: lighter;">187.5</th>
+                            <th scope="row" style="font-weight: lighter;">150</th>
+                            <th scope="row" style="font-weight: lighter;">YXR6108ZLD</th>
+                            <th scope="row" style="font-weight: lighter;">33</th>
+                            <th scope="row" style="font-weight: lighter;">GPL274H</th>
+                            <th scope="row" style="font-weight: lighter;">2450X950X1450(OP)</th>
+                            <th scope="row" style="font-weight: lighter;">1320</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R188S(6CYLINDERS.pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R220/S</th>
-                            <th scope="row">220</th>
-                            <th scope="row">173.3</th>
-                            <th scope="row">200</th>
-                            <th scope="row">160</th>
-                            <th scope="row">R6113ZD</th>
-                            <th scope="row">37</th>
-                            <th scope="row">GPL274H</th>
-                            <th scope="row">2450X950X1450(OP)</th>
-                            <th scope="row">1350</th>
-                            <th scope="row"><a href='file/Z series R200S(6CYLINDERS).pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">220</th>
+                            <th scope="row" style="font-weight: lighter;">173.3</th>
+                            <th scope="row" style="font-weight: lighter;">200</th>
+                            <th scope="row" style="font-weight: lighter;">160</th>
+                            <th scope="row" style="font-weight: lighter;">R6113ZD</th>
+                            <th scope="row" style="font-weight: lighter;">37</th>
+                            <th scope="row" style="font-weight: lighter;">GPL274H</th>
+                            <th scope="row" style="font-weight: lighter;">2450X950X1450(OP)</th>
+                            <th scope="row" style="font-weight: lighter;">1350</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R200S(6CYLINDERS).pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
                         <tr>
                             <th scope="row" style="font-weight: bold;">Z-R275/S</th>
-                            <th scope="row">275</th>
-                            <th scope="row">216.67</th>
-                            <th scope="row">250</th>
-                            <th scope="row">200</th>
-                            <th scope="row">R6126ZD</th>
-                            <th scope="row">40</th>
-                            <th scope="row">GPL274K</th>
-                            <th scope="row">2450X950X1450(OP)</th>
-                            <th scope="row">1390</th>
-                            <th scope="row"><a href='file/Z series R250S(6CYLINDERS).pdf' target="_blank"><i
+                            <th scope="row" style="font-weight: lighter;">275</th>
+                            <th scope="row" style="font-weight: lighter;">216.67</th>
+                            <th scope="row" style="font-weight: lighter;">250</th>
+                            <th scope="row" style="font-weight: lighter;">200</th>
+                            <th scope="row" style="font-weight: lighter;">R6126ZD</th>
+                            <th scope="row" style="font-weight: lighter;">40</th>
+                            <th scope="row" style="font-weight: lighter;">GPL274K</th>
+                            <th scope="row" style="font-weight: lighter;">2450X950X1450(OP)</th>
+                            <th scope="row" style="font-weight: lighter;">1390</th>
+                            <th scope="row" style="font-weight: lighter;"><a href='file/Z series R250S(6CYLINDERS).pdf' target="_blank"><i
                                         class="fa fa-download" aria-hidden="true"
                                         style="color: var(--primary);"></i></a></th>
                         </tr>
@@ -519,9 +580,9 @@
                     <div class="p-lg-5 pe-lg-0">
                         <h6 class="text-primary">Contact us</h6>
                         <h1 class="mb-4">Write us your message.</h1>
-                        <p class="mb-4 pb-2">Quality, Innovation, Stability & Financial strength. Our reputation is
+                        <p class="mb-4 pb-2" style="color: black;">Quality, Innovation, Stability & Financial strength. Our reputation is
                             built on the principle of being a world leader.</p>
-                        <form action="mailto:danlly@zflypower.com" method="post" enctype="text/plain">
+                        <form action="mailto:sales@zflypower.com" method="post" enctype="text/plain">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="name" placeholder="Your Name"
@@ -568,9 +629,9 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+8613902297746">+86 13902297746</a>
                     </p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
-                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
+                        href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
-                            href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
+                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
                     <!-- <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -617,7 +678,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-    <a href="https://wa.me/13983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
+    <a href="https://wa.me/+8613983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
         style="background-color: #289c56;"><i class="fab fa-whatsapp fa-lg" style="color: white;"></i></a>
 
     <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing" target="_blank"

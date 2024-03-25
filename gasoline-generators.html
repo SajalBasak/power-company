@@ -32,6 +32,120 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .slider-img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 600px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 1px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active-indicator,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 15px
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -66,7 +180,7 @@
                     <a href="tel:+8613902297746" class="number">+86 13902297746</a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center mx-n2">
-                    <a href="https://wa.me/13983034287" target="_blank"
+                    <a href="https://wa.me/+8613983034287" target="_blank"
                         class="btn btn-square btn-link rounded-0 border-0 border-secondary" href=""><i
                             class="fab fa-whatsapp"></i></a>
                     <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing"
@@ -84,7 +198,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center py-5 px-2 px-lg-3">
-            <img src="img/logo.png" height="55" width="70" />
+            <img src="img/logo.png" height="60" width="70" />
             <div class="row" style="width: 190px; padding-left: 20px;">
                 <h2 class="m-0 p-0 text-white title-text">ZFLY POWER</h2>
                 <p class="m-0 p-0 text-white title-text">GENERATION CO., LTD</p>
@@ -111,6 +225,13 @@
                         <a href="spare-parts.html" class="dropdown-item">Spare Parts</a>
                     </div>
                 </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="brochures.html" class="dropdown-item">Brochures</a>
+                        <a href="https://tengzhiyue.m.en.alibaba.com/" target="_blank" class="dropdown-item">Ecommerce</a>
+                    </div>
+                </div>
                 <a href="contact.html" class="nav-item nav-link">Contact Us</a>
             </div>
             <!-- <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us<i class="fa fa-arrow-right ms-3"></i></a> -->
@@ -134,7 +255,7 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="text-primary">Gasoline Generators</h6>
-                <p class="mb-4">According to the gas composition, such as oil associated gas, landfill gas, methane,
+                <p class="mb-4" style="color: black;">According to the gas composition, such as oil associated gas, landfill gas, methane,
                     propane and other gases, we can provide engines with different parameters for installation in
                     different projects, ranging from 10KW to 2000KW, into high-grade electric energy and heat energy,
                     which can drive the environmental protection system into a self-recycling environmental protection
@@ -142,10 +263,30 @@
             </div>
             <div class="row wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col rounded">
-                    <img class="img-fluid" src="img/gasoline.jpeg" alt="">
+                    <div>
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container">
+        
+                            <div class="mySlides">
+                                <img class="slider-img" src="img/gasoline-1.jpeg" style="width:100%">
+                            </div>
+        
+                            <div class="mySlides">
+                                <img class="slider-img" src="img/gasoline-2.jpeg" style="width:100%">
+                            </div>
+        
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+        
+                        </div>
+                        <!-- <div style="text-align:center; margin-bottom: 30px;">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                        </div> -->
+                    </div>
                 </div>
                 <div class="col-lg-6 col-md-6 pt-5">
-                    <p style="text-align: justify;">Gasoline generator sets, with a power range from 30KVA – 1500KVA,
+                    <p style="text-align: justify; color: black;">Gasoline generator sets, with a power range from 30KVA – 1500KVA,
                         are powered by a high quality Aircooled 5.5KVA. These gensets are reliable and durable, which
                         means that they can be used as prime continuous power supply and also provide stable standby
                         power. ZFLY provides suitable products for investors to meet different application needs
@@ -174,9 +315,9 @@
                     <div class="p-lg-5 pe-lg-0">
                         <h6 class="text-primary">Contact us</h6>
                         <h1 class="mb-4">Write us your message.</h1>
-                        <p class="mb-4 pb-2">Quality, Innovation, Stability & Financial strength. Our reputation is
+                        <p class="mb-4 pb-2" style="color: black;">Quality, Innovation, Stability & Financial strength. Our reputation is
                             built on the principle of being a world leader.</p>
-                        <form action="mailto:danlly@zflypower.com" method="post" enctype="text/plain">
+                        <form action="mailto:sales@zflypower.com" method="post" enctype="text/plain">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <input type="text" class="form-control border-0" name="name" placeholder="Your Name"
@@ -223,9 +364,9 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+8613902297746">+86 13902297746</a>
                     </p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
-                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
+                        href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i><a
-                            href="mailto:sales@zflypower.com">sales@zflypower.com</a></p>
+                            href="mailto:danlly@zflypower.com">danlly@zflypower.com</a></p>
                     <!-- <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -272,7 +413,7 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
 
-    <a href="https://wa.me/13983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
+    <a href="https://wa.me/+8613983034287" target="_blank" class="btn btn-lg btn-lg-square rounded-circle whatsapp"
         style="background-color: #289c56;"><i class="fab fa-whatsapp fa-lg" style="color: white;"></i></a>
 
     <a href="https://drive.google.com/file/d/13jd_fbjsiOSYAxV-tuCChI2wa-fPVCAk/view?usp=sharing" target="_blank"
@@ -293,6 +434,34 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-indicator", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-indicator";
+        }
+    </script>
 </body>
 
 </html>
